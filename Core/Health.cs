@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    // universal value
     public int maxHealth = 100;
+    //variable depends on character
     protected int currentHealth;
 
     protected virtual void Start()
