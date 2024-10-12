@@ -12,6 +12,7 @@ public class Enemy : Health {
     protected virtual void MoveTowardsPlayer() {
         //movements for enemy towards player
         Vector3 direction = (target.position - transform.position).normalized;
-        transform.position += direction*moveSpeed*Time.deltaTime;
+        float step = moveSpeed * Time.deltaTime;
+         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
     }
 }
